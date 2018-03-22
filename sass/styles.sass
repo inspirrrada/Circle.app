@@ -80,7 +80,7 @@ img
 /* PAGE PROPERTIES
 body
   background-image: url("../img/background-2.jpg")
-  background-repeat: no-repeat
+  //background-repeat: no-repeat
   background-size: cover
   background-position: center center
   height: 100vh
@@ -91,7 +91,7 @@ body
 header
   display: flex
   justify-content: space-between
-  flex-wrap: wrap
+  //flex-wrap: wrap
 
 .header-left-block
   display: flex
@@ -360,7 +360,7 @@ button
   position: absolute
   //background-image: url("../img/planets_sprite.png")
   top: 12%
-  z-index: -1
+  z-index: -2
 
 .monsters
   position: absolute
@@ -368,6 +368,9 @@ button
   left: 90px
   margin-bottom: 25px
   z-index: -1
+
+.monsters-2
+  display: none
 
 .airship-block
   position: absolute
@@ -417,17 +420,21 @@ button
   animation-duration: 3s
 
 
-@media (max-width: 1520px)
+@media (max-width: 1620px)
   .wrapper
     padding: 40px 60px
 
   img
     max-width: 50%
 
+  .ticket-dream
+    left: 40%
+
   #ticket-dream-blink
     left: 0
 
   .monsters
+    left: 15%
     img
       max-width: 70%
       margin-left: 10%
@@ -448,10 +455,11 @@ button
       z-index: -20
       top: 5%
 
-  .menu-items div,
-  .menu-items a
-    transform: scale(0.75)
-    margin: 0
+  .menu
+    transform: scale(0.7)
+    text-align: center
+    img
+      max-width: 100%
 
   .courses-info
     right: 10%
@@ -459,10 +467,10 @@ button
   .user-info
     right: 0
 
-  .courses-choice,
-  .courses-list,
-  input
-    width: 300px
+  //.courses-choice,
+  //.courses-list,
+  //input
+  //  width: 300px
 
   .courses-choice h3
     font-size: 23px
@@ -476,18 +484,129 @@ button
       width: 13%
       margin-left: 45px
 
+    .courses-choice,
+    .user-info
+      transform: scale(0.8)
 
-@media (max-width: 1320px)
+
+@media (max-width: 1100px)
+  img
+    max-width: 45%
+
+  .airship-block
+    max-width: 30%
+
+  .logo img
+    max-width: 50%
+
+  .monsters
+    display: none
+    img
+      max-width: 80%
+
+  .monsters-2
+    display: block
+
+  .airship-block .passenger-2
+    margin-left: 35px
+
+  .menu
+    transform: scale(0.5)
 
 
-  //img
-  //  max-width: 65%
-  //
-  //.monsters
-  //  margin-bottom: 50px
-  //  max-width: 90%
+@media (max-width: 900px)
+  .logo
+    margin-left: 0
+
+  .monsters
+    left: 0
+    margin-right: 15%
+    img
+      max-width: 100%
+      left: 0
+
+  .logo-text
+    top: -20px
+    left: -50px
+
+@media (max-width: 800px)
+  .logo
+    img
+      max-width: 40%
+
+  .wrapper
+    padding-right: 10px
+
+
+@media (max-width: 650px)
+  .monsters-2
+    display: none
+
+  .airship-block
+    max-width: 50%
+
+  //.menu
+  //  transform: scale(0.4)
+
+  .planets
+    img
+      max-width: 100%
+      left: 0
+
+  .logo
+    img
+      max-width: 55%
+
+  .ticket-dream
+    margin-bottom: 20px
+    img
+      max-width: 50%
+
+
+@media (max-width: 500px)
+  .airship-block
+    max-width: 60%
+
+  .planets
+    max-width: 75%
+    //img
+    //  max-width: 110%
+    //  left: 0
+
+  .logo
+    img
+      max-width: 50%
+
+  .ticket-dream
+    margin-bottom: 20px
+    left: 30%
+    img
+      max-width: 65%
+
+  .arrow
+    display: none
+
+
+@media (max-width: 400px)
+  .wrapper
+    padding-left: 30px
+
+  .airship-block
+    max-width: 80%
+
+  //.planets
   //  img
-  //    margin-left: 95px
-  //
-  //.ticket-dream
-  //  margin-bottom: 50px
+  //    max-width: 140%
+  //    left: 0
+
+  .logo
+    img
+      max-width: 60%
+
+  .ticket-dream
+    margin-bottom: 20px
+    img
+      max-width: 75%
+
+  .header-right-block
+    margin-left: 5%

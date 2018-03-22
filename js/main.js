@@ -54,7 +54,8 @@ $("#courses-choice").click(function () {
 });
 
 $("ul li").click(function () {
-    $("#courses-description").show();
+    $("#courses-description").fadeOut();
+    $("#courses-description").fadeIn();
 });
 
 $("#close").click(function () {

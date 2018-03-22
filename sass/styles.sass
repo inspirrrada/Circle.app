@@ -217,7 +217,6 @@ header
   margin-bottom: 40px
   &:hover
     cursor: pointer
-    opacity: .8
 
 #ticket-dream-blink
   position: absolute
@@ -366,14 +365,15 @@ button
 .monsters
   position: absolute
   bottom: 0
-  left: 85px
-  margin-bottom: 35px
+  left: 90px
+  margin-bottom: 25px
+  z-index: -1
 
 .airship-block
   position: absolute
   right: 8%
   bottom: 26%
-  z-index: -1
+  z-index: -2
 
 @keyframes passenger-1
   25%
@@ -416,3 +416,78 @@ button
   animation-iteration-count: infinite
   animation-duration: 3s
 
+
+@media (max-width: 1520px)
+  .wrapper
+    padding: 40px 60px
+
+  img
+    max-width: 50%
+
+  #ticket-dream-blink
+    left: 0
+
+  .monsters
+    img
+      max-width: 70%
+      margin-left: 10%
+
+  .header-right-block
+    padding-top: 23px
+
+  .logo
+    img
+      max-width: 60%
+
+  .planets
+    width: 90%
+    img
+      max-width: 65%
+      position: absolute
+      left: 10%
+      z-index: -20
+      top: 5%
+
+  .menu-items div,
+  .menu-items a
+    transform: scale(0.75)
+    margin: 0
+
+  .courses-info
+    right: 10%
+
+  .user-info
+    right: 0
+
+  .courses-choice,
+  .courses-list,
+  input
+    width: 300px
+
+  .courses-choice h3
+    font-size: 23px
+
+  .airship-block
+    img
+    max-width: 40%
+    .passenger-1
+      width: 10%
+    .passenger-2
+      width: 13%
+      margin-left: 45px
+
+
+@media (max-width: 1320px)
+
+
+  //img
+  //  max-width: 65%
+  //
+  //.monsters
+  //  margin-bottom: 50px
+  //  max-width: 90%
+  //  img
+  //    margin-left: 95px
+  //
+  //.ticket-dream
+  //  margin-bottom: 50px

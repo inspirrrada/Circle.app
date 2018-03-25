@@ -134,7 +134,7 @@ header {
   margin-right: -50%;
   transform: translate(-50%, -50%);
   display: none;
-  z-index: 10;
+  z-index: 20;
   overflow: hidden; }
 
 .contacts {
@@ -363,6 +363,32 @@ button {
 .monsters-2 {
   display: none; }
 
+.comment-1 {
+  width: 148px;
+  height: 164px;
+  background-image: url("../img/comment-1.png");
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-family: "Jura"; }
+
+.comment-2 {
+  width: 127px;
+  height: 103px;
+  background-image: url("../img/comment-2.png");
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  display: none; }
+
+.comment-1,
+.comment-2 {
+  font-family: "Jura";
+  font-size: 25px;
+  text-align: center;
+  padding: 15px;
+  display: none; }
+
 .airship-block {
   position: absolute;
   right: 8%;
@@ -544,13 +570,7 @@ button {
     right: 40%; }
 
   .contacts {
-    justify-content: space-evenly;
-    height: 100%;
-    width: 80vw; }
-    .contacts h1 {
-      width: 100%; }
-    .contacts .contacts-icon {
-      width: 100%; }
+    justify-content: space-evenly; }
     .contacts img {
       width: 10%;
       text-align: center; }

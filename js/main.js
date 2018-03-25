@@ -33,29 +33,68 @@ $("#social-phone").click(function() {
 });
 
 
-//COURSES BLOCK
+//COURSES BLOCK - appearing
+
 $(".ticket-dream-active").click(function () {
     $("#courses-choice").toggle();
     $("#user-info").toggle();
+
 });
 
+// if ( $("#courses-choice").hide() ) {
+//     $("#courses-list").hide();
+// }
 
+
+//COURSES CHOICE - adaptive position
+var coursesInfoBottom = ( $(window).height() * 0.67 );
+
+$("#courses-info").css("bottom", coursesInfoBottom);
+console.log($(window).height());
+
+
+var userInfoBottom = $("#courses-info").position().top + $("#courses-info").height();
+$("#user-info").css("top", userInfoBottom);
+
+//COURSES LIST - appearing/disappearing
 var k = 1;
+
 $("#courses-choice").click(function () {
     $("#courses-list").toggle();
     $("#courses-description").hide();
+
     k++;
-    if (k % 2 == 0) {
-        $("#user-info").css("top", "-100%");
+
+    if ($(window).width() >= "1400") {
+        var topDown = $("#user-info").position().top + $("#courses-list").height() + 70;
+        var topUp = $("#user-info").position().top - $("#courses-list").height() - 70;
+    } else if ( $(window).width() >= "1100" && $(window).width() < "1400" ) {
+        var topDown = $("#user-info").position().top + $("#courses-list").height() + 40;
+        var topUp = $("#user-info").position().top - $("#courses-list").height() - 40;
     } else {
-        $("#user-info").css("top", "-200%");
+        var topDown = $("#user-info").position().top + $("#courses-list").height() + 35;
+        var topUp = $("#user-info").position().top - $("#courses-list").height() - 35;
     }
 
+    console.log("topDown: " + topDown);
+    console.log("topUp: " + topUp);
+
+    if (k % 2 == 0) {
+        $("#user-info").css("top", topDown);
+    } else {
+        $("#user-info").css("top", topUp);
+    }
 });
 
+//COURSES DESCRIPTION - appearing/disappearing
 $("ul li").click(function () {
-    $("#courses-description").fadeOut();
-    $("#courses-description").fadeIn();
+
+    if ($(window).width() < "400") {
+        $("#courses-description").hide();
+    } else {
+        $("#courses-description").fadeOut();
+        $("#courses-description").fadeIn();
+    }
 });
 
 $("#close").click(function () {

@@ -80,7 +80,7 @@ img
 /* PAGE PROPERTIES
 body
   background-image: url("../img/background-2.jpg")
-  //background-repeat: no-repeat
+  background-repeat: no-repeat
   background-size: cover
   background-position: center center
   height: 100vh
@@ -228,7 +228,7 @@ header
 
 .courses-info
   position: absolute
-  bottom: 305%
+  //bottom: 305%
   right: -15%
   z-index: 15
 
@@ -308,7 +308,7 @@ header
   max-width: 420px
   text-align: center
   position: absolute
-  top: -200%
+  //top: -200%
   right: -15%
   display: none
   z-index: 15
@@ -321,7 +321,7 @@ input
   margin-bottom: 15px
   padding: 10px 15px
   font-size: 18px
-  font-weight: bold
+  //font-weight: bold
   @include placeholder
     font-family: "Calibri"
     text-transform: uppercase
@@ -329,11 +329,13 @@ input
     color: #838383
   &:hover
     cursor: pointer
-  &:focus
+  &:focus,
+  &:active
     background-color: #337c7a
     color: #0c3a3a
     @include placeholder
       color: white
+
 
 
 button
@@ -375,7 +377,7 @@ button
 .airship-block
   position: absolute
   right: 8%
-  bottom: 26%
+  bottom: 25%
   z-index: -2
 
 @keyframes passenger-1
@@ -461,20 +463,6 @@ button
     img
       max-width: 100%
 
-  .courses-info
-    right: 10%
-
-  .user-info
-    right: 0
-
-  //.courses-choice,
-  //.courses-list,
-  //input
-  //  width: 300px
-
-  .courses-choice h3
-    font-size: 23px
-
   .airship-block
     img
     max-width: 40%
@@ -484,9 +472,78 @@ button
       width: 13%
       margin-left: 45px
 
-    .courses-choice,
-    .user-info
-      transform: scale(0.8)
+  .courses-info,
+  .user-info
+    right: 35%
+    //transform: scale(0.75)
+
+  .courses-choice,
+  .courses-list,
+  .user-info input
+    width: 315px
+    background-color: rgba(25,121,122, 0.5)
+
+  .courses-description
+    width: 300px
+    margin-right: 35px
+
+  .courses-choice
+    padding: 5px 20px
+    h3
+      font-size: 25px
+      color: #b1b1b1
+      &:hover,
+      &:active
+        color: lightgray
+      &::after
+        margin-left: 28px
+
+  button
+    padding: 5px 19px
+    background-color: rgba(25,121,122, 0.5)
+    color: rgba(255,255,255, 0.85)
+    font-weight: normal
+
+  .user-info
+    input
+      padding: 5px 15px
+      @include placeholder
+        color: rgba(255,255,255, 0.7)
+
+  .courses-list
+    font-size: 15px
+    line-height: 32px
+    li
+      &:hover
+        background-color: rgba(211, 211, 211, 0.5)
+      &::before
+        bottom: 11px
+
+  .courses-description
+    min-height: 0
+    background-color: rgba(25,121,122, 0.5)
+
+
+
+@media (max-width: 1300px)
+  input
+    padding: 3px 15px
+
+
+  button
+    padding: 3px 19px
+
+  .courses-choice
+    h3
+      font-size: 20px
+      line-height: 25px
+      &::after
+        margin-left: 65px
+
+  .courses-info,
+  .user-info
+    right: 40%
+
 
 
 @media (max-width: 1100px)
@@ -513,6 +570,61 @@ button
   .menu
     transform: scale(0.5)
 
+  .courses-choice,
+  .courses-list,
+  .user-info input
+    width: 200px
+
+  .courses-info,
+  .user-info
+    right: 50%
+
+  .courses-choice
+    padding: 5px 10px
+    margin-bottom: 10px
+    h3
+      font-size: 17px
+      line-height: 20px
+      color: lightgray
+      &:hover,
+      &:active
+        color: lightgray
+      &::after
+        margin-left: 20px
+
+  .courses-list
+    li
+      padding: 0 15px 0 25px
+      font-size: 14px
+      &::before
+        right: 25px
+
+  .user-info
+    max-width: 200px
+
+  button
+    padding: 5px 10px
+    font-size: 15px
+    &:active
+      font-size: 15px
+
+  .courses-description
+    right: -175%
+    p
+      font-size: 10px
+      line-height: 20px
+
+  input
+    font-size: 14px
+    //font-weight: bold
+    background-color: rgba(25,121,122, 0.5)
+    @include placeholder
+      font-size: 14px
+      color: white
+
+
+
+
 
 @media (max-width: 900px)
   .logo
@@ -528,6 +640,14 @@ button
   .logo-text
     top: -20px
     left: -50px
+
+  input
+    margin-bottom: 5px
+
+
+  .courses-info,
+  .user-info
+    right: 105%
 
 @media (max-width: 800px)
   .logo
@@ -545,9 +665,6 @@ button
   .airship-block
     max-width: 50%
 
-  //.menu
-  //  transform: scale(0.4)
-
   .planets
     img
       max-width: 100%
@@ -562,6 +679,36 @@ button
     img
       max-width: 50%
 
+  .courses-choice
+    h3
+      font-size: 15px
+      &::after
+        margin-left: 35px
+
+  input
+    @include placeholder
+      font-size: 12px
+
+  button
+    font-size: 12px
+
+  .courses-list
+    li
+      font-size: 12px
+      line-height: 25px
+      &::before
+        bottom: 6px
+
+  .courses-description
+    width: 250px
+    right: -155%
+    p
+      font-size: 9px
+      line-height: 15px
+
+  .courses-info,
+  .user-info
+    right: 95%
 
 @media (max-width: 500px)
   .airship-block
@@ -569,9 +716,20 @@ button
 
   .planets
     max-width: 75%
-    //img
-    //  max-width: 110%
-    //  left: 0
+
+  .courses-info,
+  .user-info
+    right: 75%
+
+  .courses-description
+    width: 190px
+    right: -130%
+
+  .courses-choice,
+  .courses-list,
+  .user-info input
+    width: 180px
+
 
   .logo
     img
@@ -594,10 +752,15 @@ button
   .airship-block
     max-width: 80%
 
-  //.planets
-  //  img
-  //    max-width: 140%
-  //    left: 0
+  .courses-info,
+  .user-info
+    right: 35%
+
+  .courses-list
+    li
+      &::before
+        transform: rotate(90deg)
+
 
   .logo
     img

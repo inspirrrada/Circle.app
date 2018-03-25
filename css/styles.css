@@ -125,13 +125,17 @@ header {
     margin-bottom: 9px; }
 
 .contacts-block {
-  position: absolute;
+  position: fixed;
+  width: 85%;
+  min-width: 300px;
+  max-width: 1600px;
   top: 50%;
   left: 47%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   display: none;
-  z-index: 10; }
+  z-index: 10;
+  overflow: hidden; }
 
 .contacts {
   position: absolute;
@@ -401,6 +405,12 @@ button {
   animation-iteration-count: infinite;
   animation-duration: 3s; }
 
+@media (max-width: 1800px) {
+  .contacts {
+    font-size: 30px;
+    line-height: 30px; }
+    .contacts h1 {
+      font-size: 55px; } }
 @media (max-width: 1620px) {
   .wrapper {
     padding: 40px 60px; }
@@ -500,7 +510,22 @@ button {
 
   .courses-description {
     min-height: 0;
-    background-color: rgba(25, 121, 122, 0.5); } }
+    background-color: rgba(25, 121, 122, 0.5); }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 25px;
+    line-height: 25px; }
+    .contacts img {
+      margin: 25px 0 0 0;
+      width: 15%; }
+    .contacts h1 {
+      font-size: 40px; }
+
+  .contacts-block-bg {
+    max-width: 100%; } }
 @media (max-width: 1300px) {
   input {
     padding: 3px 15px; }
@@ -516,7 +541,23 @@ button {
 
   .courses-info,
   .user-info {
-    right: 40%; } }
+    right: 40%; }
+
+  .contacts {
+    justify-content: space-evenly;
+    height: 100%;
+    width: 80vw; }
+    .contacts h1 {
+      width: 100%; }
+    .contacts .contacts-icon {
+      width: 100%; }
+    .contacts img {
+      width: 10%;
+      text-align: center; }
+    .contacts .city-contacts-block {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%; } }
 @media (max-width: 1100px) {
   img {
     max-width: 45%; }
@@ -597,7 +638,16 @@ button {
       color: white; }
     input:-ms-input-placeholder {
       font-size: 14px;
-      color: white; } }
+      color: white; }
+
+  .contacts-block {
+    width: 80%; }
+
+  .contacts h1 {
+    font-size: 35px; }
+  .contacts .city-contacts {
+    font-size: 23px;
+    line-height: 20px; } }
 @media (max-width: 900px) {
   .logo {
     margin-left: 0; }
@@ -618,13 +668,36 @@ button {
 
   .courses-info,
   .user-info {
-    right: 105%; } }
+    right: 105%; }
+
+  .contacts-block {
+    width: 75%; }
+
+  .contacts h1 {
+    font-size: 30px; }
+  .contacts .city-contacts {
+    font-size: 18px;
+    line-height: 18px; }
+  .contacts img {
+    width: 7%; } }
 @media (max-width: 800px) {
   .logo img {
     max-width: 40%; }
 
   .wrapper {
-    padding-right: 10px; } }
+    padding-right: 10px; }
+
+  .contacts-block {
+    width: 75%; }
+
+  .contacts h1 {
+    font-size: 25px; }
+  .contacts .city-contacts {
+    font-size: 15px;
+    line-height: 10px; }
+  .contacts img {
+    width: 5%;
+    margin-bottom: 10px; } }
 @media (max-width: 650px) {
   .monsters-2 {
     display: none; }
@@ -676,7 +749,15 @@ button {
 
   .courses-info,
   .user-info {
-    right: 95%; } }
+    right: 95%; }
+
+  .contacts {
+    padding: 15px 0; }
+    .contacts .city-contacts {
+      font-size: 13px;
+      line-height: 0; }
+    .contacts img {
+      margin: 0; } }
 @media (max-width: 500px) {
   .airship-block {
     max-width: 60%; }
@@ -707,7 +788,10 @@ button {
       max-width: 65%; }
 
   .arrow {
-    display: none; } }
+    display: none; }
+
+  .contacts-block {
+    width: 85%; } }
 @media (max-width: 400px) {
   .wrapper {
     padding-left: 30px; }
@@ -731,6 +815,16 @@ button {
       max-width: 75%; }
 
   .header-right-block {
-    margin-left: 5%; } }
+    margin-left: 5%; }
+
+  .contacts-block {
+    left: 50%; }
+
+  .contacts h1 {
+    font-size: 18px; }
+  .contacts .city-contacts {
+    font-size: 10px; }
+  .contacts img {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

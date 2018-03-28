@@ -119,6 +119,7 @@ function changeTicketLight () {
 setInterval(changeTicketLight,500);
 
 
+$(".wrapper").parallax({imageSrc: "../img/background-2.jpg"});
 
 //DIALOGUE
 /*var text1 = "Вітаю!"; // Ваш текст
@@ -199,6 +200,10 @@ for (var i = 0; i < dialogue.length; i++) {
     }
     console.log(dialogue[i]);
 };*/
+
+
+
+
 
 
 
